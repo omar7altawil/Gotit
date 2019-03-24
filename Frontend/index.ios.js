@@ -10,7 +10,7 @@ import {
     View,
     Image,
   } from 'react-native';
-  import {Provider} from 'redux'
+  import {Provider} from 'react-redux'
   export default class Main extends Component {  
 render() {
     return (

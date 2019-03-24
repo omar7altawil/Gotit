@@ -4,23 +4,21 @@
 import React, { Component } from 'react';
 import {AppRegistry} from 'react-native';
 import App from './src/App';
-import {git remote add origin
-    StyleSheet,
+import {StyleSheet,
     Text,
     View,
     Image,
   } from 'react-native';
-  import {Provider} from 'redux'
+import {Provider} from 'react-redux'
 
   export default class Main extends Component {  
 render() {
     return (
-      <Provider >
+      <Provider>
       <View style={styles.container}>
         <App />
       </View>
       </Provider>
-
     );
   }
 }

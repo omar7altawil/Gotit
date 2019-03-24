@@ -12,6 +12,7 @@
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-rest-client": "^0.1.1",
     "react-native-router-flux": "^3.40.1",
+    "react-redux": "^6.0.1",
     "redux": "^4.0.1"
   },
   "devDependencies": {
