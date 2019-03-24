@@ -1,5 +1,6 @@
-export const Users= ()=>{
+export const Getuser= (value)=>{
     return {
-        type:'getuser'
+        type:'Setname',
+        payload:value
     };
 }
