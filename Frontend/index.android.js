@@ -11,7 +11,7 @@ import {StyleSheet,
   } from 'react-native';
   import {Provider} from 'react-redux'
   import { createStore } from 'redux'
-  import LoginRed from './src/Reducers/Login-red';
+  import LoginRed from './src/Redux/Reducers/Login-red';
   
     const store=createStore(LoginRed)
     export default class Main extends Component {  
