@@ -16,8 +16,9 @@ import SignupSection from './SignupSection';
 import usernameImg from '../../images/username.png';
 import passwordImg from '../../images/password.png';
 import eyeImg from '../../images/eye_black.png';
-
-export default class Form extends Component {
+import {connect} from 'react-redux'
+import {Getuser} from './../../Redux/Actions/index'
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,8 +31,8 @@ export default class Form extends Component {
     return (   
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <UserInput
-          value={this.state.username}
-          onChangeText={(value) => this.setState({username: value})}
+          value={this.props.username}
+          onChangeText={(value) => this.props.Getuser(value)}
           source={usernameImg}
           placeholder="Username"
           autoCapitalize={'none'}
@@ -64,3 +65,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+function mapStateToProps(state){
+  console.log(state)
+  return {
+    username:state.username,
+    password:state.password
+  }
+}
+export default connect(mapStateToProps,{Getuser})(Form);

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Dimensions from 'Dimensions';
 import {StyleSheet, View, TextInput, Image,TouchableOpacity} from 'react-native';
-import {connect} from 'react-redux'
+
 export default class UserInput extends Component {
   render() {
     return (
@@ -30,7 +30,6 @@ export default class UserInput extends Component {
     );
   }
 }
-
 UserInput.propTypes = {
   placeholder: PropTypes.string.isRequired,
   secureTextEntry: PropTypes.bool,
@@ -74,3 +73,4 @@ const styles = StyleSheet.create({
     top: 9,
   },
 });
+
