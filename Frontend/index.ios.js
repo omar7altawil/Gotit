@@ -10,11 +10,15 @@ import {
     View,
     Image,
   } from 'react-native';
-  import {Provider} from 'react-redux'
+import {Provider} from 'react-redux'
+import { createStore } from 'redux'
+import LoginRed from './src/Reducers/Login-red';
+
+  const store=createStore(LoginRed)
   export default class Main extends Component {  
-render() {
+  render() {
     return (
-      <Provider >
+      <Provider store={store} >
       <View style={styles.container}>
         <App />
       </View>

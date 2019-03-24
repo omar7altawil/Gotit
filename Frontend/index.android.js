@@ -9,12 +9,15 @@ import {StyleSheet,
     View,
     Image,
   } from 'react-native';
-import {Provider} from 'react-redux'
-
-  export default class Main extends Component {  
-render() {
-    return (
-      <Provider>
+  import {Provider} from 'react-redux'
+  import { createStore } from 'redux'
+  import LoginRed from './src/Reducers/Login-red';
+  
+    const store=createStore(LoginRed)
+    export default class Main extends Component {  
+    render() {
+      return (
+      <Provider store={store} >
       <View style={styles.container}>
         <App />
       </View>

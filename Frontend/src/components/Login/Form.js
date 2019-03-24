@@ -16,7 +16,6 @@ import SignupSection from './SignupSection';
 import usernameImg from '../../images/username.png';
 import passwordImg from '../../images/password.png';
 import eyeImg from '../../images/eye_black.png';
-import { createStore } from 'redux'
 
 export default class Form extends Component {
   constructor(props) {
