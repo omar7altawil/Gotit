@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Dimensions from 'Dimensions';
 import {StyleSheet, View, TextInput, Image,TouchableOpacity} from 'react-native';
 import {connect} from 'react-redux'
-class UserInput extends Component {
+export default class UserInput extends Component {
   render() {
     return (
       <View style={styles.inputWrapper}>
