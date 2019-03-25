@@ -17,22 +17,20 @@ import usernameImg from '../../images/username.png';
 import passwordImg from '../../images/password.png';
 import eyeImg from '../../images/eye_black.png';
 import {connect} from 'react-redux'
-import {Getuser} from './../../Redux/Actions/index'
+import {Getname} from './../../Redux/Actions/index'
+import {Getpass} from './../../Redux/Actions/index'
+import {Show} from './../../Redux/Actions/index'
+
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-        username: '',
-        password: '',
-        showPass: true,
-    };
   }
   render() {
     return (   
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <UserInput
           value={this.props.username}
-          onChangeText={(value) => this.props.Getuser(value)}
+          onChangeText={(value) => this.props.Getname(value)}
           source={usernameImg}
           placeholder="Username"
           autoCapitalize={'none'}
@@ -40,16 +38,16 @@ class Form extends Component {
           autoCorrect={false}
         />
         <UserInput
-          value={this.state.password}
-          onChangeText={(value) => this.setState({password: value})}
+          value={this.props.password}
+          onChangeText={(value) => this.props.Getpass(value)}
           source={passwordImg}
           placeholder="Password"
           returnKeyType={'done'}
           autoCapitalize={'none'}
           autoCorrect={false}
           source2={eyeImg}
-          showPass={this.state.showPass}
-          press={() => this.setState({showPass: !(this.state.showPass)})}
+          showPass={this.props.show}
+          press={this.props.Show}
         />
       </KeyboardAvoidingView>
     );
@@ -69,7 +67,8 @@ function mapStateToProps(state){
   console.log(state)
   return {
     username:state.username,
-    password:state.password
+    password:state.password,
+    show:state.show
   }
 }
-export default connect(mapStateToProps,{Getuser})(Form);
+export default connect(mapStateToProps,{Getname,Getpass,Show})(Form);
