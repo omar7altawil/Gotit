@@ -5,6 +5,7 @@ import Form from './Form';
 import Wallpaper from './Wallpaper';
 import ButtonSubmit from './ButtonSubmit';
 import SignupSection from './SignupSection';
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 
 export default class LoginScreen extends Component {
   render() {
@@ -14,6 +15,10 @@ export default class LoginScreen extends Component {
         <Form />
         <SignupSection />
         <ButtonSubmit />
+        <GoogleSigninButton
+      style={width: 192, height: 48 }
+      size={GoogleSigninButton.Size.Wide}
+      color={GoogleSigninButton.Color.Dark} />
       </Wallpaper>
     );
   }
