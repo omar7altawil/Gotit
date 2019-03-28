@@ -12,7 +12,7 @@ import {
   View,
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
-
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import spinner from '../../images/loading.gif';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -90,6 +90,12 @@ export default class ButtonSubmit extends Component {
           />
         </Animated.View>
       </View>
+      <GoogleSigninButton
+      style={{ width: 192, height: 48 }}
+      size={GoogleSigninButton.Size.Wide}
+      color={GoogleSigninButton.Color.Dark}
+      onPress={this._signIn}
+      disabled={this.state.isSigninInProgress} />
     );
   }
 }

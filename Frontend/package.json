@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.1",
+    "react-native-google-signin": "^0.10.0",
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-rest-client": "^0.1.1",
     "react-native-router-flux": "^3.40.1",
