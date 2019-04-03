@@ -41,8 +41,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
-  text: {
-    color: 'white',
-    backgroundColor: 'transparent',
-  },
+  backgroundColor: 'transparent',
 });
