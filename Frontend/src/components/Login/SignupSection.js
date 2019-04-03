@@ -15,7 +15,6 @@ export default class SignupSection extends Component {
   }
     _onPress() {
       if (this.state.isLoading) return;
-  
       setTimeout(() => {
         Actions.secondScreen();
         this.setState({isLoading: false});
